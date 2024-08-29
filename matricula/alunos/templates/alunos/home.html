@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sistema de Matrícula</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 500px;
+            width: 100%;
+        }
+        h2 {
+            color: #6c63ff;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 18px;
+            margin: 20px 0;
+        }
+        a {
+            color: #ffffff;
+            text-decoration: none;
+            background-color: #6c63ff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        a:hover {
+            background-color: #5b54e3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Bem-vindo ao Sistema de Matrícula</h2>
+        <p><a href="{% url 'cadastrar_aluno' %}">Cadastrar Aluno</a></p>
+        <p><a href="{% url 'listar_alunos' %}">Listar Alunos</a></p>
+    </div>
+</body>
+</html>

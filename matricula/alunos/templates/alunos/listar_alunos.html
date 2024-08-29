@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Alunos</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h2>Lista de Alunos Cadastrados</h2>
+        <ul class="student-list">
+            {% for aluno in alunos %}
+            <li>
+                <span class="student-name">{{ aluno.nome }}</span> - 
+                <span class="student-course">{{ aluno.curso }}</span>
+            </li>
+            {% endfor %}
+        </ul>
+        <!-- Botão para voltar à página de matrícula -->
+        <a href="{% url 'cadastrar_aluno' %}" class="button">Voltar para Matrícula</a>
+        <a href="{% url 'home' %}" class="button">Voltar ao Início</a>
+    </div>
+</body>
+</html>
