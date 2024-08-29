@@ -14,6 +14,7 @@ class Aluno(models.Model):
     CURSO_CHOICES = [
         ('CS', 'Ciência da Computação'),
         ('ENG', 'Engenharia'),
+        ('LTR', 'Letras'),
         ('ADM', 'Administração'),
         ('MED', 'Medicina'),
         ('ENF', 'Enfermagem'),
